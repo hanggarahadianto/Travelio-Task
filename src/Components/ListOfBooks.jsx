@@ -10,9 +10,10 @@ function ListOfBooks() {
     if (evt.key === "Enter") {
       axios
         .get(
-          "https://www.googleapis.com/books/v1/volumes?q='+search+'%7Bkeyword" +
+          // "https://www.googleapis.com/books/v1/volumes?q='+search+'%7Bkeyword" +
+          //   "&maxResults=40"
+          "https://www.googleapis.com/books/v1/volumes?q=%7Bkeyword" +
             "&maxResults=40"
-          // "https://www.googleapis.com/books/v1/volumes?q='+search+'%7Bkeyword"
         )
         .then((res) => setData(res.data.items))
         .catch((err) => console.log(err));
@@ -24,7 +25,7 @@ function ListOfBooks() {
       <div className="grid grid-cols-12 ml-20">
         <div className="col-span-3">
           <span className="text-purple-800 font-semibold text-3xl">
-            Popular Now
+            Search Now
           </span>
         </div>
         <div className="col-span-6">

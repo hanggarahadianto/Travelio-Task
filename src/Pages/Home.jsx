@@ -1,4 +1,3 @@
-import React from "react";
 import { Search, Gear, Heart, Bell } from "react-bootstrap-icons";
 import Navigation from "../Components/Navigation";
 import Logo from "../Components/Logo";
@@ -6,6 +5,8 @@ import ListOfBooks from "../Components/ListOfBooks";
 import Feedback from "../Components/Feedback";
 import Footer from "../Components/Footer";
 import Testimony from "../Components/Testimony";
+import Popular from "../Components/Popular";
+
 function Home() {
   return (
     <div className="bg-slate-100">
@@ -18,6 +19,7 @@ function Home() {
             <Navigation />
           </section>
         </div>
+
         <div className="col-span-3">
           <div className="flex px-4 py-2 gap-8">
             <Heart className="w-8 h-8 cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:font-bold duration-300" />
@@ -35,6 +37,9 @@ function Home() {
         <div className="w-full">
           <ListOfBooks />
         </div>
+      </section>
+      <section>
+        <Popular />
       </section>
       <section>
         <Feedback />
